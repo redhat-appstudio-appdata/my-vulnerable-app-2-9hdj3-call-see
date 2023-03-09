@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: dvpwa-t7zr
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: dvpwa-t7zr
+    app.kubernetes.io/part-of: my-vulnerable-app-2
+  name: dvpwa-t7zr
+  namespace: rh-ee-ellin-tenant
+spec:
+  ports:
+  - port: 8081
+    targetPort: 8081
+  selector:
+    app.kubernetes.io/instance: dvpwa-t7zr
+status:
+  loadBalancer: {}
